@@ -1,5 +1,6 @@
 const User = require('../models/User')
-
+const BodyArea = require('../models/BodyArea')
+const Lift = require ('../models/Lift')
 const userController = {
     index: (req, res) => {
         User.find({}).then((user)=>{
@@ -18,6 +19,13 @@ const userController = {
         }).then(newUser =>{
             res.redirect('/')
         })
+    },
+    show:(req, res) => {
+        const userId = req.params.userId
+        User.findById(userId).populate('BodyArea').then((user)=>{
+            res.render('user/show', {user})
+        })
+        
     }
 
 }

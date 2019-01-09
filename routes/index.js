@@ -7,10 +7,10 @@ const userController = require('../controllers/userController')
 router.get('/', userController.index)
 router.post('/', userController.create)
 router.get('/new', userController.new)
-// router.get('/:id', linkController.show)
-// router.get('/:id/edit', linkController.edit)
-// router.patch('/:id', linkController.update)
-// router.delete('/:id', linkController.delete)
+router.get('/:userId', userController.show)
+// router.get('/:id/edit', userController.edit)
+// router.patch('/:id', userController.update)
+// router.delete('/:id', userController.delete)
 
 
 

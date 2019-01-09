@@ -5,7 +5,7 @@ const User = new Schema({
     name: String,
     age: Number,
     weight: Number,
-    bodypart: [{
+    bodyArea: [{
         type: Schema.Types.ObjectId,
         ref: "BodyArea"
     }]
