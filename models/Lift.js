@@ -1,9 +1,9 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const Arms = new Schema({
+const Lift = new Schema({
     name: String,
-    lifts: []
+    weight: Number
 });
 
-module.exports = mongoose.model("Arms", Arms)
+module.exports = mongoose.model("Lift", Lift)

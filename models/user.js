@@ -5,7 +5,10 @@ const User = new Schema({
     name: String,
     age: Number,
     weight: Number,
-    bodypart: []
+    bodypart: [{
+        type: Schema.Types.ObjectId,
+        ref: "BodyArea"
+    }]
 });
 
 module.exports = mongoose.model("User", User)
