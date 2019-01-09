@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const carController = require('../controllers/carController')
+const BodyAreaController = require('../controllers/BodyAreaController')
 
-router.get('/cars', carController.index)
+router.get('/bodyarea', BodyAreaController.index)
 
 module.exports = router
