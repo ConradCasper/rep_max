@@ -10,7 +10,7 @@ const curl = new Lift({
 
 const pullup = new Lift({
     name: "Pull Up",
-    weight: 25
+    rep: 25
 })
 
 const arms = new BodyArea({

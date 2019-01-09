@@ -4,6 +4,7 @@ const router = require('./routes/index')
 
 app.use('/', router)
 
+app.set("view engine", "hbs")
 
 const PORT = process.env.PORT || 3000
 
