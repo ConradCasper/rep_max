@@ -5,7 +5,8 @@ const BodyAreaController = {
         BodyArea.find({}).then((BodyArea) => {
             res.send(BodyArea)
         })
-    }
+    },
+    
 }
 
 module.exports = BodyAreaController
