@@ -29,7 +29,7 @@ const userController = {
         
     },
     delete: (req, res) => {
-        const userId = req.params.userId
+        const userId = req.params.id
         User.findByIdAndDelete(userId)
         .then(() => {
             res.redirect(`/`)
