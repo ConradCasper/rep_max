@@ -28,6 +28,19 @@ const userController = {
         })
         
     },
+    edit: (req, res) => {
+        const userId = req.params.id
+        res.render('user/edit', {user})
+    },
+    update: (req, res) => {
+        const newslinkId = req.params.id
+        const commentId = req.params.commentId
+        console.log(commentId)
+        Comment.findByIdAndUpdate(commentId, req.body, {new: true})
+        .then((comment) => {
+            res.redirect(`/${newslinkId}/comments/${commentId}`)
+        })
+    },
     delete: (req, res) => {
         const userId = req.params.id
         User.findByIdAndDelete(userId)
