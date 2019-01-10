@@ -14,6 +14,6 @@ router.get('/:userId', userController.show)
 
 
 
-router.get('/bodyarea', BodyAreaController.index)
+router.get('/bodyarea', bodyAreaController.index)
 
 module.exports = router

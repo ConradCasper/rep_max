@@ -1,6 +1,6 @@
 const BodyArea = require('../models/BodyArea')
 
-const BodyAreaController = {
+const bodyAreaController = {
     index: (req, res) => {
         BodyArea.find({}).then((BodyArea) => {
             res.send(BodyArea)
@@ -9,4 +9,4 @@ const BodyAreaController = {
     
 }
 
-module.exports = BodyAreaController
+module.exports = bodyAreaController
