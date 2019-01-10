@@ -27,6 +27,13 @@ const userController = {
             res.render('user/show', {user})
         })
         
+    },
+    delete: (req, res) => {
+        const userId = req.params.userId
+        User.findByIdAndDelete(userId)
+        .then(() => {
+            res.redirect(`/`)
+        })
     }
 
 }
