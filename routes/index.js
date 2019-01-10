@@ -9,7 +9,7 @@ router.post('/', userController.create)
 router.get('/new', userController.new)
 router.get('/:id', userController.show)
 router.get('/:id/edit', userController.edit)
-// router.patch('/:id', userController.update)
+router.patch('/:id', userController.update)
 router.delete('/:id', userController.delete)
 
 

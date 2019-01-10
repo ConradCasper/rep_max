@@ -30,15 +30,13 @@ const userController = {
     },
     edit: (req, res) => {
         const userId = req.params.id
-        res.render('user/edit', {user})
+        res.render('user/edit', {userId})
     },
     update: (req, res) => {
-        const newslinkId = req.params.id
-        const commentId = req.params.commentId
-        console.log(commentId)
-        Comment.findByIdAndUpdate(commentId, req.body, {new: true})
-        .then((comment) => {
-            res.redirect(`/${newslinkId}/comments/${commentId}`)
+        const userId = req.params.id
+        User.findByIdAndUpdate(userId, req.body, {new: true})
+        .then((user) => {
+            res.redirect(`/`)
         })
     },
     delete: (req, res) => {

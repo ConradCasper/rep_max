@@ -7,7 +7,8 @@
 <p>Age: {{age}}</p>
 
 <form action="/{{_id}}?_method=DELETE" method="POST">
-   <button type="submit">Delete User</button>
+   <button type="submit" class="btn">Delete User</button>
 </form>
+<a href="/{{_id}}/edit"><button class="btn">Edit</button></a>
 
 {{/each}}
