@@ -5,33 +5,6 @@ const mongoose = require('mongoose')
 
 
 
-
-// User.deleteMany({}).then(() => {
-//     return User.create({
-//         name: "Conrad",
-//         age: 27,
-//         weight: 185,
-//         bodyArea: []
-//     }).then((conrad) => {
-//         const arms = BodyArea.create({
-//             name: "arms",
-//             muscle: "Biceps",
-//             lifts: []
-//         }).then((arms) => {
-//             const pullup = Lift.create({
-//                 name: "Pull Up",
-//                 rep: 25
-//             }).then((pullup)=> {
-//                 arms.lifts.push(pullup)
-//                 conrad.bodyArea.push(arms)
-//             })
-//         })
-//     }).then(() => {
-//         conrad.save()
-//     })
-// })
-
-
 const curl = new Lift({
     name: "Curl",
     weight: 50
