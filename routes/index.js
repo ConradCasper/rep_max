@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const BodyAreaController = require('../controllers/BodyAreaController')
+const bodyAreaController = require('../controllers/bodyAreaController')
 const userController = require('../controllers/userController')
 
 
