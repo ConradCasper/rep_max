@@ -1,5 +1,6 @@
 <h1>{{user.name}}</h1>
-{{#each BodyArea}}
-{{name}}
-{{muscle}}
+{{#each user.bodyArea}}
+<div>{{this.name}}</div>
+<div>{{this.muscle}}</div>
+<div>{{this._id}}</div>
 {{/each}}
