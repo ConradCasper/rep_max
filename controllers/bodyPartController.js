@@ -6,7 +6,7 @@ const bodyPartController = {
             res.send(BodyPart)
         })
     },
-    
+
 }
 
 module.exports = bodyPartController

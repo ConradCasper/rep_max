@@ -1,11 +1,12 @@
-
 {{#each user}}
 
-<a href= {{_id}}><h3>{{name}}</h3></a>
+<a href={{_id}}>
+   <h3>{{name}}</h3>
+</a>
 <p>Weight: {{weight}}</p>
 <p>Age: {{age}}</p>
 
-<form action="/{{_id}}?_method=DELETE" method="POST" >
+<form action="/{{_id}}?_method=DELETE" method="POST">
    <button type="submit" class="btn">Delete</button>
 </form>
 <a href="/{{_id}}/edit"><button class="btn">Edit</button></a>
