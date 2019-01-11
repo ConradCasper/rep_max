@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const bodyAreaController = require('../controllers/bodyAreaController')
+const bodyPartController = require('../controllers/bodyPartController')
 const userController = require('../controllers/userController')
 
 
@@ -14,6 +14,6 @@ router.delete('/:id', userController.delete)
 
 
 
-router.get('/bodyarea', bodyAreaController.index)
+router.get('/bodyarea', bodyPartController.index)
 
 module.exports = router

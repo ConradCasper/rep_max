@@ -1,9 +1,9 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const BodyArea = new Schema({
+const BodyPart = new Schema({
     name: String,
     lifts: []
 });
 
-module.exports = mongoose.model("BodyArea", BodyArea)
+module.exports = mongoose.model("BodyPart", BodyPart)

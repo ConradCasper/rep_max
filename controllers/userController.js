@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const BodyArea = require('../models/BodyArea')
+const BodyPart = require('../models/BodyPart')
 const Lift = require ('../models/Lift')
 const userController = {
     index: (req, res) => {
@@ -23,7 +23,7 @@ const userController = {
     show:(req, res) => {
         const userId = req.params.id
         console.log(userId)
-        User.findById(userId).populate('BodyArea').then((user)=>{
+        User.findById(userId).populate('BodyPart').then((user)=>{
             console.log(user)
         
             res.render('user/show', {user})
