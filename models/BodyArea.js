@@ -3,7 +3,6 @@ const Schema = mongoose.Schema
 
 const BodyArea = new Schema({
     name: String,
-    muscle: String,
     lifts: []
 });
 
