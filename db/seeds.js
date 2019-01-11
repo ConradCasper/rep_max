@@ -17,21 +17,21 @@ const pullup = new Lift({
 
 const arms = new BodyPart({
     name: "arms",
-    lifts: [curl, pullup]
+    lifts: []
 })
 
 const conrad = new User({
     name: "Conrad",
     age: 27,
     weight: 185,
-    bodyArea: [arms]
+    bodyPart: [arms]
 })
 
 const conrad2 = new User({
     name: "Conrad 2",
     age: 27,
     weight: 185,
-    bodyArea: [arms]
+    bodyPart: [arms]
 })
 
 User.deleteMany({})
