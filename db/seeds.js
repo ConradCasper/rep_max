@@ -1,4 +1,4 @@
-const BodyArea = require('../models/BodyArea')
+const BodyPart = require('../models/BodyPart')
 const Lift = require('../models/Lift')
 const User = require('../models/User')
 const mongoose = require('mongoose')
@@ -15,9 +15,8 @@ const pullup = new Lift({
     rep: 25
 })
 
-const arms = new BodyArea({
+const arms = new BodyPart({
     name: "arms",
-    muscle: "Biceps",
     lifts: [curl, pullup]
 })
 
@@ -36,10 +35,10 @@ const conrad2 = new User({
 })
 
 User.deleteMany({})
-.then(()=> BodyArea.deleteMany({}))
+.then(()=> BodyPart.deleteMany({}))
 .then(()=> Lift.deleteMany({}))
 .then(()=> Lift.insertMany([curl, pullup]))
-.then(()=> BodyArea.insertMany([arms]))
+.then(()=> BodyPart.insertMany([arms]))
 .then(()=> conrad.save())
 .then(()=> conrad2.save())
 .then(()=> console.log("Database Seeded Successfully"))

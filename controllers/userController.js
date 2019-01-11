@@ -23,10 +23,10 @@ const userController = {
     show:(req, res) => {
         const userId = req.params.id
         console.log(userId)
-        User.findById(userId).populate('BodyPart').then((user)=>{
-            console.log(user)
+        User.findById(userId).populate('bodyPart').then((user)=>{
+            const bodyPart = user.bodyPart
         
-            res.render('user/show', {user})
+            res.render('user/show', {user: user, bodyPart: bodyPart})
         })
         
     },
