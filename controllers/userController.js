@@ -21,9 +21,11 @@ const userController = {
         })
     },
     show:(req, res) => {
-        const userId = req.params.userId
+        const userId = req.params.id
+        console.log(userId)
         User.findById(userId).populate('BodyArea').then((user)=>{
             console.log(user)
+        
             res.render('user/show', {user})
         })
         
